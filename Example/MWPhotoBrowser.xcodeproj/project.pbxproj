@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E1618920F4FF4F00B67BC3 /* earth.gif in Resources */ = {isa = PBXBuildFile; fileRef = 03E1618820F4FF4E00B67BC3 /* earth.gif */; };
 		0E2C49E141ED41CED7DE2619 /* libPods-MWPhotoBrowser_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18604B9163F9466AFDF6678E /* libPods-MWPhotoBrowser_Example.a */; };
 		0EC5D4B51B4C46E50092ACC1 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC5D4A41B4C46E50092ACC1 /* photo1.jpg */; };
 		0EC5D4B61B4C46E50092ACC1 /* photo1t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC5D4A51B4C46E50092ACC1 /* photo1t.jpg */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03E1618820F4FF4E00B67BC3 /* earth.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = earth.gif; sourceTree = "<group>"; };
 		0EC5D4A41B4C46E50092ACC1 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = "MWPhotoBrowser/Local Media/photo1.jpg"; sourceTree = SOURCE_ROOT; };
 		0EC5D4A51B4C46E50092ACC1 /* photo1t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1t.jpg; path = "MWPhotoBrowser/Local Media/photo1t.jpg"; sourceTree = SOURCE_ROOT; };
 		0EC5D4A61B4C46E50092ACC1 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = "MWPhotoBrowser/Local Media/photo2.jpg"; sourceTree = SOURCE_ROOT; };
@@ -132,6 +134,7 @@
 		4C18E1431B47F05900E3D63A /* Local Media */ = {
 			isa = PBXGroup;
 			children = (
+				03E1618820F4FF4E00B67BC3 /* earth.gif */,
 				0EC5D4C81B4C480E0092ACC1 /* video_thumb.jpg */,
 				0EC5D4A41B4C46E50092ACC1 /* photo1.jpg */,
 				0EC5D4A51B4C46E50092ACC1 /* photo1t.jpg */,
@@ -259,7 +262,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				CF1AF08FF54F6013168012F4 /* [CP] Embed Pods Frameworks */,
 				B32830DD35B95440BA824536 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -279,7 +281,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				98FBE21BA5242C57B50A0AA0 /* [CP] Embed Pods Frameworks */,
 				CC5C009C2D6A102A7C487D3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -303,7 +304,7 @@
 				ORGANIZATIONNAME = "Michael Waterfall";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = NAQE7SQSQ8;
+						DevelopmentTeam = LY7BX7U97P;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -341,6 +342,7 @@
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				0EC5D4BD1B4C46E50092ACC1 /* photo5.jpg in Resources */,
 				0EC5D4BF1B4C46E50092ACC1 /* photo6.jpg in Resources */,
+				03E1618920F4FF4F00B67BC3 /* earth.gif in Resources */,
 				0EC5D4BE1B4C46E50092ACC1 /* photo5t.jpg in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				0EC5D4BB1B4C46E50092ACC1 /* photo4.jpg in Resources */,
@@ -375,13 +377,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MWPhotoBrowser_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8CEC2DB9D1878E5FD72A4F3C /* [CP] Check Pods Manifest.lock */ = {
@@ -390,28 +395,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MWPhotoBrowser_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		98FBE21BA5242C57B50A0AA0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B32830DD35B95440BA824536 /* [CP] Copy Pods Resources */ = {
@@ -420,9 +413,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Example/Pods-MWPhotoBrowser_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser-iOS7.0/MWPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -435,28 +431,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser-iOS7.1/MWPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF1AF08FF54F6013168012F4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Example/Pods-MWPhotoBrowser_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -589,7 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = NAQE7SQSQ8;
+				DEVELOPMENT_TEAM = LY7BX7U97P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MWPhotoBrowser/MWPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "MWPhotoBrowser/MWPhotoBrowser-Info.plist";
@@ -607,7 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = NAQE7SQSQ8;
+				DEVELOPMENT_TEAM = LY7BX7U97P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MWPhotoBrowser/MWPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "MWPhotoBrowser/MWPhotoBrowser-Info.plist";

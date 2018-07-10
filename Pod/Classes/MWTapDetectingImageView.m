@@ -51,7 +51,7 @@
 }
 
 - (void)handleSingleTap:(UITouch *)touch {
-	if ([_tapDelegate respondsToSelector:@selector(imageView:singleTapDetected:)])
+    if ([_tapDelegate respondsToSelector:@selector(imageView:singleTapDetected:)])
 		[_tapDelegate imageView:self singleTapDetected:touch];
 }
 
