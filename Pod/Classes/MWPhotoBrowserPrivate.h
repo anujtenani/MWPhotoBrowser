@@ -11,6 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "MWGridViewController.h"
 #import "MWZoomingScrollView.h"
+#import <AVKit/AVKit.h>
 
 // Declare private methods of browser
 @interface MWPhotoBrowser () {
@@ -54,9 +55,13 @@
     UIImage *_previousNavigationBarBackgroundImageLandscapePhone;
     
     // Video
-    MPMoviePlayerViewController *_currentVideoPlayerViewController;
+    // MPMoviePlayerViewController *_currentVideoPlayerViewController;
     NSUInteger _currentVideoIndex;
     UIActivityIndicatorView *_currentVideoLoadingIndicator;
+
+    //Video New
+    AVPlayerViewController *_avVideoPlayerViewController;
+    
     
     // Misc
     BOOL _hasBelongedToViewController;
